@@ -9,7 +9,7 @@ feature: dinosaur-race.png
 featureAlt: dinosaur race
 ---
 
-I often handwave over long travel, especially when running games like Dungeons & Dragons. There _can_ be interesting encounters along the way--bandits, ruins, an injured person--but often the point is what happens at the destination. That's fine. However, that doesn't mean you can't have something that's a fun ride and the best example I can think of is the dinosaur race in [Tomb of Annihilation](https://dnd.wizards.com/products/tabletop-games/rpg-products/tomb-annihilation).)
+I often handwave over long travel, especially when running games like Dungeons & Dragons. There _can_ be interesting encounters along the way--bandits, ruins, an injured person--but often the point is what happens at the destination. That's fine. However, that doesn't mean you can't have something that's a fun ride and the best example I can think of is the dinosaur race in [Tomb of Annihilation](https://dnd.wizards.com/products/tabletop-games/rpg-products/tomb-annihilation).
 
 This was clearly added purely for fun. The players can earn some benefits and maybe some favor with some wealthy patron, or perhaps they get connected with the right (or wrong) people. However, this is one of those things that can stand entirely on it's own for most people. This is just pure fun as you race a dinosaur through the streets of Port Nyanzaru, potentially having your dinosaur bite the other dinosaurs in an attempt to win first place.
 

@@ -1,0 +1,5 @@
+name = "wanderingreferee"
+pages_build_output_dir = "public"
+
+[build]
+command = "hugo --baseURL $CF_PAGES_URL"

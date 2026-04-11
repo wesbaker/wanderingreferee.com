@@ -4,11 +4,12 @@ date: 2020-08-14 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "I hadn't really thought about how a battle standard could work in an RPG, but it feels like a fun item with obvious uses and obvious drawbacks. Here's a quick take on a standard that helps morale, works as a makeshift weapon, and makes its bearer an immediate target."
+feature: banner.jpg
+featureAlt: Soldiers waiting battle, one is holding a battle standard
 ---
 
 The first thing I think of when I hear banner is something like this:
-
-![Soldiers waiting battle, one is holding a battle standard](banner.jpg)
 
 However, I don't think I've ever thought of it's utility in a roleplaying game before. Banners, standards, and flags were used to mark the position of various groups of troops on the battlefield and allowed the general officers in the back to get a glimpse at what was happening. I've not run a full-scale battle like this in an RPG and generally shy away from it, but I could see it's use in a smaller game where there were a number of hirelings and one could carry a standard. But what would it do? I imagine it would be good for morale of the group, but wouldn't negatively affect the other group's morale. It could also be used as an improvised weapon, but isn't really made for that and probably breaks easily enough. Also, if it is good for morale, it would draw _certain_ enemies to destroy it. That feels like enough of a start for an item (for B/X Dungeons & Dragons and maybe more specifically [Old-School Essentials](https://necroticgnome.com/collections/old-school-essentials))...
 

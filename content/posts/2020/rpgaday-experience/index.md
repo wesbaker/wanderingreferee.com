@@ -4,6 +4,7 @@ date: 2020-08-31 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "What keeps drawing me back to RPGs is the experience they create with other people. They combine story, flexibility, and shared play in a way that board games never quite managed for me."
 ---
 
 Ultimately the reason that I GM and play RPGs is because of the experience of playing in them and the stories they create. I was initially drawn to RPGs because I had been playing a lot of board games and noticed two things:

@@ -4,6 +4,7 @@ date: 2020-08-08 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Shade makes me think of dungeons and the people who thrive in them. They're places of danger, treasure, hard choices, and the sort of hidden movement that lets thieves and assassins do their work."
 ---
 
 You know what has a lot of shade? A dungeon, right where you should be. Why? High adventure! Treasure! Discoveries untold! Camaraderie! It's here where you'll run into new problems and new people, things that will make you ponder possible solutions and alternatives. You'll try to find that solution that crosses all of the t's and dots all of the i's, but not everyone can walk away happy all the time. Sometimes, you'll need to break a few eggs--or burn a few bridges--in order to get what you (think you) want.

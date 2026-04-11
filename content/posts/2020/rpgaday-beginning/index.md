@@ -8,6 +8,8 @@ tags:
 
 Every year for the past seven years, [David Chapman has run something called RPGaDAY](https://www.autocratik.com/2020/06/announcing-rpgaday2020.html). It's a series of prompts about RPGs for an entire month with the goal being to drive some discussion around them. I had a blast with it last year and I'm hoping to be as consistent this year with it.
 
+<!--more-->
+
 ## _Beginning_ a Campaign
 
 My favorite and least favorite part of an RPG _campaign_ is the beginning. I love all of the potential there, the new adventures, the new characters, and seeing where things go. I find low-level play more interesting as a player and a GM. Once you get to those rarified high levels you typically have all of the tools to get past everything, but at low levels you **must be creative** to get what you want.

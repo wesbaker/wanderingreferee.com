@@ -4,6 +4,7 @@ date: 2020-08-09 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Light feels like an easy shorthand for goodness, hope, and people trying to set things right. Whether it's sunlight on the road or a torch in the dark, it works as both a literal and symbolic force in a game."
 ---
 
 Now, unlike shade, light is a force for good. No thieves or assassins to be found there. Instead, there's only the sunny road before you and the pack slung over your back and maybe a few fellows at your side. Honest people work in the light (and in most cases have seen the metaphorical light, maybe literally). There's almost always someone who is righting the wrongs and making the world a better place, so long as you believe in what is right and true, I suppose.

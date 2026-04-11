@@ -4,11 +4,13 @@ date: 2020-08-30 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+feature: dungeon-door-lois-romer.jpg
+featureAlt: Dungeon Door
 ---
 
 The most common form of a _portal_ that your players will experience is a door. A door by itself is boring, it has a knob and it divides rooms from other rooms and hallways. However, that door breaks up the dungeon into individual segments that can be processed one at a time by the players. The GM may not be so lucky if the players are making a lot of noise, they'll need to keep track if whatever is on the other side is aware of the players.
 
-![Dungeon Door](dungeon-door-lois-romer.jpg)
+<!--more-->
 
 When interacting with doors you have to think about a few things. First, material:
 

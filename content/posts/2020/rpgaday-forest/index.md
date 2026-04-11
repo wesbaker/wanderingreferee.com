@@ -4,6 +4,7 @@ date: 2020-08-06 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "A forest is a great first adventure site because it feels close to home while still leaving room for mystery. It can hold ruins, witches, bandits, or stranger things, and it still leaves the party with options once they're done."
 ---
 
 A forest makes for an excellent first stop on your adventure. Forests are close enough to home, but can have many unexplored paths and places. There could be a ruined church or a pastoral glade that is intersected by a ley line. They could encounter bandits or a fellow adventuring party. Maybe they're been sent into the forest to bring the local witch back for healing or for crimes committed against the church. Maybe this forest has a group of elves that make their home in the boughs and protect those who enter the forest as long as they mind their manners.

@@ -4,6 +4,7 @@ date: 2020-08-20 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Investigation is hard to run because players will miss clues you think are obvious. That's why I keep coming back to the three clue rule and try to build in enough redundancy to keep the game moving."
 ---
 
 Investigation is tough in a roleplaying game. First off, your players are bound to miss a clue that you think is so plainly obvious. In fact, there's a "rule" about that: [the three clue rule](https://thealexandrian.net/wordpress/1118/roleplaying-games/three-Clue-Rule).

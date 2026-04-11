@@ -1,0 +1,8 @@
+baseURL = "https://wanderingreferee.com/"
+languageCode = "en-US"
+title = "The Wandering Referee"
+capitalizeListTitles = false
+
+[permalinks]
+  [permalinks.page]
+    posts = "/posts/:contentbasename/"

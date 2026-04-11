@@ -1,0 +1,34 @@
+colorScheme = "ocean"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+
+[author]
+  name = "Wes Baker"
+  headline = "Gamer, RPG Referee, Painter, Reader"
+  links = [
+    { mastodon = "https://hachyderm.io/@wesbaker" },
+    { bluesky = "https://bsky.app/profile/wesbaker.com" },
+    { github = "https://github.com/wesbaker" },
+  ]
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 10
+
+[article]
+  showDate = true
+  showAuthor = false
+  showReadingTime = true
+  showTaxonomies = true
+  showTableOfContents = true
+
+[list]
+  showSummary = true
+  groupByYear = true
+
+[footer]
+  showThemeAttribution = false
+
+[plausible]
+  domain = "wanderingreferee.com"

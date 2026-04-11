@@ -2,8 +2,11 @@
 /public/
 /resources/
 
-# Hugo module cache
+# Hugo module cache (not the same as _vendor/)
 /go/pkg/
+
+# Claude Code project files
+/.claude/
 
 # Hugo lock file
 .hugo_build.lock

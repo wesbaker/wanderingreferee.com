@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
   <!-- Parchment background -->
-  <rect width="180" height="180" rx="18" fill="#e4d8be"/>
+  <rect width="180" height="180" fill="#e4d8be"/>
   <!-- Worn edge overlay -->
-  <rect width="180" height="180" rx="18" fill="#8a7050" opacity="0.12"/>
+  <rect width="180" height="180" fill="#8a7050" opacity="0.12"/>
 
   <!-- Fold lines: vertical and horizontal -->
   <line x1="90" y1="0" x2="90" y2="180" stroke="#b09040" stroke-width="1.5" opacity="0.3"/>

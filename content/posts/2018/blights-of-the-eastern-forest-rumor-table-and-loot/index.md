@@ -1,12 +1,12 @@
 ---
-title: "Blights of the Eastern Forest Rumor Table and Loot"
-date: 2018-10-24T17:45:00-04:00
+title: "Blights ov the Eastern Forest Rumor Table and Loot"
+date: 2018-10-24 17:45:00.000000000 -0400
 tags:
 - dungeon-crawl-classics
 - rpgs
 ---
 
-As part of [my review for _Sky ov Crimson Flame_](/posts/sky-ov-crimson-flame/), I mentioned that I wanted to make a rumor table and roll up some loot for the _Blights of the Eastern Forest_ hex crawl. Here's what I've come up with.
+As part of [my review for _Sky ov Crimson Flame_](/posts/sky-ov-crimson-flame/), I mentioned that I wanted to make a rumor table and roll up some loot for the _Blights ov the Eastern Forest_ hex crawl. Here's what I've come up with.
 
 **Warning**: If I'm your GM, stop reading now.
 
@@ -14,11 +14,11 @@ As part of [my review for _Sky ov Crimson Flame_](/posts/sky-ov-crimson-flame/),
 
 | 1d20 | Rumor |
 | ---- | ----- |
-| 1 | Deep in the woods life a creature older than the forest itself, capable of bestowing great strength upon those that defeat it. |
-| 2 | A creature from times unknown guards a kings random of treasure, but beware its cunning, it's been fooled before. |
+| 1 | Deep in the woods lives a creature older than the forest itself, capable of bestowing great strength upon those that defeat it. |
+| 2 | A creature from times unknown guards a king's ransom of treasure, but beware its cunning, it's been fooled before. |
 | 3 | Blood runs deep within the forest, spreading death and destruction by corrupting the flora into fauna. |
 | 4 | A Chaos Lord lives and breathes under wrathful trees, cleanse the forest to appease the gods. |
-| 5 | A corrupted sorceress commands her domain of the western part of the forest, any who enter are never seen from again. |
+| 5 | A corrupted sorceress commands her domain of the western part of the forest, any who enter are never seen again. |
 | 6 | Children are being stolen from their beds at night, never to be seen again. |
 | 7 | At night, travelers have seen translucent bears of many colors in the glen near the river's fork. |
 | 8 | A merchant saw bones floating on their own accord while a haunting march was sung all around him. |
@@ -35,9 +35,9 @@ As part of [my review for _Sky ov Crimson Flame_](/posts/sky-ov-crimson-flame/),
 | 19 | Fires have a strange way of pulling you in and seeing something that isn't there, dontcha think? |
 | 20 | Fae creatures roam the river's edge at night, drowning children and young lovers. |
 
-## Magic Shield at the Sactuary of the Sightless Sisters
+## Magic Shield at the Sanctuary of the Sightless Sisters
 
-I didn't love the idea that the golden shield wasn't slightly magical, so I used the [Weapon and Amror enchantment generator](https://www.lastgaspgrimoire.com/generators/the-seventh-order-of-the-random-generator/) from Last Gasp Grimoire and rolled that it's a "Shield of Trimuph" which heals 1hp per HD slain which sorta kinda fits in with the whole healing sanctuary thing. It probably needs a downside though...
+I didn't love the idea that the golden shield wasn't slightly magical, so I used the [Weapon and Armor enchantment generator](https://www.lastgaspgrimoire.com/generators/the-seventh-order-of-the-random-generator/) from Last Gasp Grimoire and rolled that it's a "Shield of Triumph" which heals 1hp per HD slain which sorta kinda fits in with the whole healing sanctuary thing. It probably needs a downside though...
 
 ## Magic Axe in The Wrook's Hut
 
@@ -45,7 +45,7 @@ The Wrook's Hut is supposed to have some magic items, but the party should alrea
 
 | Satyrsprawl |
 | ----------- |
-| Battleaxe, two hands, 1d10 damage
-| +1 to attacks and damage
-| Wielder can cast _Detect Magic_ twice a day
-| Fey Bane, causes painful wounds to fey creatures, inflicts an additional 1d4 damage
+| Battleaxe, two hands, 1d10 damage |
+| +1 to attacks and damage |
+| Wielder can cast _Detect Magic_ twice a day |
+| Fey Bane, causes painful wounds to fey creatures, inflicts an additional 1d4 damage |

@@ -4,6 +4,7 @@ date: 2020-08-28 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Some of the best RPG moments come from close calls: fights barely won, clues found in time, or villains stopped at the last second. Those scenes are memorable, but it's just as fun to let players completely outplay a situation when they've earned it."
 ---
 
 I find some of the best experiences in roleplaying games to be close scrapes. You just barely beat the villain and his goons, some of you either badly injured or on the cusp of death. You just make it to the train station in time to catch your quarry as they're about to board the departing train. You get the clue in the nick of time. Those are moments folks tend to remember and I _try_ to provide those experiences.

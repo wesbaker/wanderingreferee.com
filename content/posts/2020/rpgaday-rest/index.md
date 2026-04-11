@@ -4,6 +4,7 @@ date: 2020-08-13 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Rest gets more interesting once you stop treating it as empty time and start asking what the rest of the world is doing. Random encounters, clues, and downtime costs can all make that pause matter."
 ---
 
 Rest is one of those things I typically handwave away in most of my games, but I've started to think more about how resting affects everything outside of the party. When they rested, what was everything else in the dungeon, town, or wilderness doing? This is where random tables come in handy: roll to see if anything disturbs them. I'm a big fan of how Chris McDowell's [Electric Bastionland](https://chrismcdee.itch.io/electric-bastionland) does it. Roll a d6 and consult the following table:

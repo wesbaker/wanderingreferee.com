@@ -4,6 +4,7 @@ date: 2020-08-12 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "I like messages that create tension, whether that's a private note about hidden information or an out-of-game message that keeps bookkeeping away from session time. Both kinds can make a campaign run better."
 ---
 
 There are two kinds of messages I want to talk about: private messages and between game messages.

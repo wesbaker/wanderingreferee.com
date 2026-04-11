@@ -4,6 +4,7 @@ date: 2020-08-23 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Modern D&D and old-school D&D make a useful contrast because they put the edge in different places. In one, player characters usually have the advantage; in the other, they're constantly looking for any advantage they can get."
 ---
 
 There are a number of RPG systems and playstyles out there, but I want to focus on two today:

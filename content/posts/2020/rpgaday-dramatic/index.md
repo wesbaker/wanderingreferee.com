@@ -4,6 +4,7 @@ date: 2020-08-16 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Drama at the table often comes from NPCs who feel vivid and obvious in what they want. If players can hear that in the way a character talks and acts, the scene has a much better chance of landing."
 ---
 
 For me, dramatic means getting into my NPCs and really thinking about how they sound and their mannerisms. I want the players to see at least a part of what's in my head regarding this character. I'm currently running [The Lost Mine of Phandelver](https://www.dndbeyond.com/sources/lmop) for my sons and their friend and having a blast. I've run this adventure before and really enjoy how it holds the players' hands for a bit and then lets them loose once they hit Phandalin, while at the same time giving the GM some tools to lead the players along.

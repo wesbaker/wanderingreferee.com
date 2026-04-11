@@ -29,6 +29,3 @@ autoSwitchAppearance = true
 
 [footer]
   showThemeAttribution = false
-
-[plausible]
-  domain = "wanderingreferee.com"

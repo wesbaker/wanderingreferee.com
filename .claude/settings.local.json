@@ -10,7 +10,7 @@
       "Read(//private/tmp/**)",
       "Bash(node -e ':*)",
       "WebFetch(domain:jpanther.github.io)",
-      "Bash(git -C /Users/wesbaker/Projects/hobby-blog:*)",
+      "Bash(git -C /Users/wesbaker/Projects/wanderingreferee.com:*)",
       "Bash(git checkout:*)",
       "Bash(git pull:*)",
       "Bash(ln:*)"

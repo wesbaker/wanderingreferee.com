@@ -11,7 +11,7 @@
 The Hugo version is pinned in two places. When upgrading Hugo, update **both**:
 
 1. This file (the version number above)
-2. Cloudflare Pages → Settings → Environment variables → `HUGO_VERSION`
+2. `wrangler.toml` → `[vars]` → `HUGO_VERSION`
 
 ## Content Structure
 

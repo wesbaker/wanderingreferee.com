@@ -6,6 +6,7 @@ tags:
 - rpgs
 summary: "I usually handwave long travel, but the ride itself can still be worth focusing on when it's fun enough. The dinosaur race in Tomb of Annihilation is a great example of travel that stands on its own."
 feature: dinosaur-race.png
+featureAlt: dinosaur race
 ---
 
 I often handwave over long travel, especially when running games like Dungeons & Dragons. There _can_ be interesting encounters along the way--bandits, ruins, an injured person--but often the point is what happens at the destination. That's fine. However, that doesn't mean you can't have something that's a fun ride and the best example I can think of is the dinosaur race in [Tomb of Annihilation](https://dnd.wizards.com/products/tabletop-games/rpg-products/tomb-annihilation).)

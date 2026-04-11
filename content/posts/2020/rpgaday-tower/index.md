@@ -6,6 +6,7 @@ tags:
 - rpgs
 summary: "Tower of the Black Pearl is exactly the kind of Dungeon Crawl Classics adventure I love: flavorful setup, dangerous treasure, and a built-in time limit that forces hard choices. A tower that sinks back into the sea is a great way to create pressure and turn the escape into the best part of the scenario."
 feature: tower-of-the-black-pearl.jpg
+featureAlt: Cover of Tower of the Black Pearl
 ---
 
 _Spoiler warning: I'm going to talk about Tower of the Black Pearl, an adventure for Dungeon Crawl Classics. If you're part of my group, play DCC with me, and haven't gone into a tower that has risen from the seas, then you should turn away now._

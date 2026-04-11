@@ -6,6 +6,7 @@ tags:
 - rpgs
 summary: "I hadn't really thought about how a battle standard could work in an RPG, but it feels like a fun item with obvious uses and obvious drawbacks. Here's a quick take on a standard that helps morale, works as a makeshift weapon, and makes its bearer an immediate target."
 feature: banner.jpg
+featureAlt: Soldiers waiting battle, one is holding a battle standard
 ---
 
 The first thing I think of when I hear banner is something like this:

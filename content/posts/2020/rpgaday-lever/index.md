@@ -6,6 +6,7 @@ tags:
 - rpgs
 summary: "Players can solve a surprising number of problems with simple tools if you give them space to think through the situation. A trapped barred door in my game turned into a good reminder to build problems that reward practical solutions like levers, ropes, and pulleys."
 feature: barred-door.png
+featureAlt: barred door
 ---
 
 Levers make me think of simple machines: pulleys, wheel and axle, wedges, levers, and so forth. Some _very_ complex problems can be solved with these very tools. Recently in one of my games, players had to remove the bar from a barred door, kinda like this:

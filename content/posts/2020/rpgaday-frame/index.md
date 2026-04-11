@@ -4,6 +4,7 @@ date: 2020-08-15 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Large framed art makes for excellent loot because it's valuable, fragile, and awkward to move. Treasure like that forces players to think about transport, risk, and who they can actually sell it to."
 ---
 
 For Frame, I want to take a play out of [Top Gear](<https://en.wikipedia.org/wiki/Top_Gear_(2002_TV_series)>)/[The Grand Tour's](https://en.wikipedia.org/wiki/The_Grand_Tour) playbook: having **large** framed art as loot in the dungeon. Now, a large framed piece of art (or a sculpture if you're feeling really mean) has some obvious problems with it:

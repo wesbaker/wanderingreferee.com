@@ -4,6 +4,7 @@ date: 2020-08-21 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "The Year Zero Engine's push mechanic is one of my favorite rules because it makes failure a choice instead of a dead end. You can try again, but every version of the rule makes you pay for it in some way."
 ---
 
 One of my _favorite_ mechanisms in roleplaying games is the Year Zero Engine's push mechanism. Some preamble: in all Year Zero Engine games you roll a number of d6s to see if you succeed. You get a number of d6s equal to your attribute (strength, agility, intelligence, empathy) plus a relevant skill. _Only_ 6s count as successes. With some of your weaker skills that means you may not see a single 6 and therefore fail the check. However, you can always **push** your roll. Pushing means you get to re-roll any dice that aren't locked. Locked dice are usually other successes (in the event you need or want more than 1 success) or failures (more on that later).

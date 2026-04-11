@@ -4,6 +4,7 @@ date: 2020-08-17 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Most RPGs focus on danger, discovery, and struggle, but they still need moments of comfort. A little safety, relief, or breathing room gives players a chance to recover and makes the harder parts of a campaign hit better."
 ---
 
 Comfort is something most RPGs discourage because it's not the focus. Most games are focused on exploration, combat, discovery, and plunder. That being said, _all_ games should have a bit of comfort in them. Your players need that down beat to recover from the boss fight. They might need a momentary reprieve to collect themselves (and refresh their spells).

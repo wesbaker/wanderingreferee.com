@@ -4,6 +4,7 @@ date: 2020-08-11 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Initiative can be handled in all kinds of ways, and each one changes the feel of combat a little. I've been especially interested in systems like Troika's Stack that make turn order more uncertain and dynamic."
 ---
 
 Initiative has been done in different ways in many games:

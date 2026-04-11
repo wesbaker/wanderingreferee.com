@@ -4,6 +4,7 @@ date: 2020-08-27 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "If you're looking for an adventure hook, somebody always needs a favor. A small request can turn into travel, danger, betrayal, or a larger obligation with very little effort."
 ---
 
 Someone _always_ needs a favor. If you're ever looking for your next adventure, there's an NPC somewhere--that the players have already talked to--that likely needs _something_. It could be a simple fetch quest that they can't do. Maybe the location is really far away, hard to traverse, or dangerous for them. Could be that they are just too busy. Perhaps what they need isn't theirs for the taking and you'll need to liberate it from someone.

@@ -4,6 +4,7 @@ date: 2020-08-18 11:00:00.000000000 -04:00
 tags:
 - rpgaday
 - rpgs
+summary: "Meeting in a tavern works just fine, but a campaign opening can do more than that. Bringing the party together in a battlefield, escape pod, or some other tense situation gives the game an immediate spark."
 ---
 
 A lot of campaigns start with the same few words:

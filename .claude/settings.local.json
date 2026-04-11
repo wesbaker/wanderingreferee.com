@@ -2,9 +2,6 @@
   "permissions": {
     "allow": [
       "Bash(hugo version:*)",
-      "Bash(grep -v \"\\\\.md$\")",
-      "Bash(grep -l \"board-games\\\\|rpgs\\\\|rpgaday\\\\|reviews\" /Users/wesbaker/Projects/wesbaker.com/content/posts/*.md)",
-      "Bash(grep -rL \"board-games\\\\|rpgs\\\\|rpgaday\\\\|reviews\" /Users/wesbaker/Projects/wesbaker.com/content/posts/*.md)",
       "Bash(grep:*)",
       "Bash(awk:*)",
       "Bash(go version:*)",
@@ -13,11 +10,7 @@
       "Read(//private/tmp/**)",
       "Bash(node -e ':*)",
       "WebFetch(domain:jpanther.github.io)",
-      "Bash(git -C /Users/wesbaker/Projects/hobby-blog add static/favicon.svg static/favicon-16x16.png static/favicon-32x32.png static/apple-touch-icon.png static/site.webmanifest layouts/_partials/extend-head.html)",
-      "Bash(git -C /Users/wesbaker/Projects/hobby-blog commit -m ':*)",
-      "Bash(git -C /Users/wesbaker/Projects/hobby-blog push)",
-      "Bash(git -C /Users/wesbaker/Projects/hobby-blog pull --rebase)",
-      "Bash(git -C /Users/wesbaker/Projects/hobby-blog add static/favicon.svg static/favicon-16x16.png static/favicon-32x32.png static/apple-touch-icon.png)",
+      "Bash(git -C /Users/wesbaker/Projects/hobby-blog:*)",
       "Bash(git checkout:*)",
       "Bash(git pull:*)",
       "Bash(ln:*)"

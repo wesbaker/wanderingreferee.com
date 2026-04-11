@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo version:*)",
+      "Bash(grep:*)",
+      "Bash(awk:*)",
+      "Bash(go version:*)",
+      "Bash(gh issue:*)",
+      "Bash(ruby:*)",
+      "Read(//private/tmp/**)",
+      "Bash(node -e ':*)",
+      "WebFetch(domain:jpanther.github.io)",
+      "Bash(git -C /Users/wesbaker/Projects/wanderingreferee.com:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(ln:*)"
+    ]
+  }
+}

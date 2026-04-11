@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- Parchment background -->
+  <rect width="180" height="180" rx="18" fill="#e4d8be"/>
+  <!-- Worn edge overlay -->
+  <rect width="180" height="180" rx="18" fill="#8a7050" opacity="0.12"/>
+
+  <!-- Fold lines: vertical and horizontal -->
+  <line x1="90" y1="0" x2="90" y2="180" stroke="#b09040" stroke-width="1.5" opacity="0.3"/>
+  <line x1="0" y1="90" x2="180" y2="90" stroke="#b09040" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Terrain: small hills top-left -->
+  <path d="M 22 68 L 34 50 L 46 68" stroke="#8a7040" stroke-width="2" fill="none" opacity="0.55" stroke-linejoin="round"/>
+  <path d="M 36 68 L 50 48 L 64 68" stroke="#8a7040" stroke-width="2" fill="none" opacity="0.55" stroke-linejoin="round"/>
+
+  <!-- Terrain: wavy river bottom-right -->
+  <path d="M 110 155 Q 125 148, 130 158 Q 138 168, 155 160"
+        stroke="#6090a0" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Starting settlement: small square -->
+  <rect x="22" y="130" width="10" height="10" rx="1" stroke="#7c5028" stroke-width="2" fill="none" opacity="0.7"/>
+
+  <!-- Dotted wandering trail -->
+  <path d="M 27 130 C 30 105, 55 115, 65 90 C 75 65, 105 75, 118 52"
+        stroke="#8b2500" stroke-width="5" stroke-dasharray="7,6"
+        fill="none" stroke-linecap="round"/>
+
+  <!-- X destination with circle -->
+  <circle cx="132" cy="42" r="16" stroke="#8b2500" stroke-width="2.5" fill="none" opacity="0.7"/>
+  <line x1="122" y1="32" x2="142" y2="52" stroke="#8b2500" stroke-width="5" stroke-linecap="round"/>
+  <line x1="142" y1="32" x2="122" y2="52" stroke="#8b2500" stroke-width="5" stroke-linecap="round"/>
+</svg>

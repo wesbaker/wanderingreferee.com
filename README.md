@@ -46,17 +46,13 @@ The local `link` archetype scaffolds front matter like:
 date = '2026-04-20T12:34:56-04:00'
 draft = true
 title = 'My Link Post'
-externalUrl = ''
+linkUrl = ''
 summary = ''
 showReadingTime = false
-
-[build]
-render = 'never'
-list = 'local'
 +++
 ```
 
-Set `externalUrl` to the destination URL. Congo will render the title as an external link on list pages, and the page itself will redirect immediately to that URL.
+Set `linkUrl` to the destination URL. Link posts render as normal permalinked posts on this site, while list pages and the article header expose the external URL alongside the local permalink.
 
 ## Configuration
 

@@ -2,11 +2,8 @@
 date = '{{ .Date }}'
 draft = true
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
-externalUrl = ''
+linkUrl = ''
 summary = ''
+tags = []
 showReadingTime = false
-
-[build]
-render = 'never'
-list = 'local'
 +++

@@ -14,7 +14,7 @@ autoSwitchAppearance = true
 [homepage]
   layout = "profile"
   showRecent = true
-  showRecentItems = 10
+  recentLimit = 10
 
 [article]
   showDate = true

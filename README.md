@@ -20,34 +20,43 @@ Posts live in `content/posts/YEAR/slug/index.md` (Hugo leaf bundles). URLs are `
 
 ## Creating a New Post
 
-Use the `new-post` Claude skill:
+Standard post:
 
-```
-/new-post
+```bash
+hugo new content posts/2026/my-post/index.md
 ```
 
-It will prompt for a title (and optionally a slug), then scaffold:
+Link post:
 
+```bash
+hugo new content posts/2026/my-link-post/index.md --kind link
 ```
+
+Both commands create a leaf bundle at:
+
+```text
 content/posts/{year}/{slug}/
 └── index.md
 ```
 
-With frontmatter:
+The local `link` archetype scaffolds front matter like:
 
-```yaml
----
-title: ""
-date: 2026-04-11 15:30:00.000000000 -04:00
-summary: ""
-feature:
-featureAlt:
-tags:
-  -
----
+```toml
++++
+date = '2026-04-20T12:34:56-04:00'
+draft = true
+title = 'My Link Post'
+externalUrl = ''
+summary = ''
+showReadingTime = false
+
+[build]
+render = 'never'
+list = 'local'
++++
 ```
 
-The date is set from the current system time — never inferred.
+Set `externalUrl` to the destination URL. Congo will render the title as an external link on list pages, and the page itself will redirect immediately to that URL.
 
 ## Configuration
 

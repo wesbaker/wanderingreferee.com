@@ -10,3 +10,21 @@ h1, h2, h3, h4, h5, h6,
 header nav > div > a {
   font-family: 'Cartridge', ui-sans-serif, system-ui, sans-serif;
 }
+
+header nav > div > a {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.sidebar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* TOC sidebar width */
+@media (min-width: 1024px) {
+  .lg\:max-w-xs {
+    max-width: 22rem;
+  }
+}

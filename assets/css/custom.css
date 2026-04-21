@@ -16,45 +16,6 @@ header nav > div > a {
   line-height: 2.25rem;
 }
 
-/* Homepage two-column layout */
-.homepage-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .homepage-layout {
-    flex-direction: row;
-    gap: 3rem;
-    align-items: flex-start;
-  }
-}
-
-.homepage-main {
-  flex: 1 1 0%;
-  min-width: 0;
-}
-
-.homepage-sidebar {
-  flex-shrink: 0;
-  width: 100%;
-}
-
-@media (min-width: 1024px) {
-  .homepage-sidebar {
-    width: 18rem;
-  }
-}
-
-.sidebar-section + .sidebar-section {
-  margin-top: 2rem;
-}
-
-.sidebar-tags-heading {
-  margin-bottom: 0.75rem;
-}
-
 .sidebar-tags {
   display: flex;
   flex-wrap: wrap;

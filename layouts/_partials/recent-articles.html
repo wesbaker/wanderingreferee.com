@@ -1,6 +1,5 @@
 {{ if .Site.Params.homepage.showRecent | default false }}
-  <h2 class="mt-8 text-2xl font-extrabold">{{ i18n "shortcode.recent_articles" | emojify }}</h2>
-  {{ $postsSection := .Site.GetPage "section" "posts" }}
+{{ $postsSection := .Site.GetPage "section" "posts" }}
   {{ $recentLimit := .Site.Params.homepage.recentLimit | default 5 }}
   {{ with $postsSection }}
     {{ range first $recentLimit .RegularPagesRecursive.ByDate.Reverse }}

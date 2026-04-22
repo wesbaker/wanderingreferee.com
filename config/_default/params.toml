@@ -12,7 +12,7 @@ autoSwitchAppearance = true
   ]
 
 [homepage]
-  layout = "profile"
+  layout = "custom"
   showRecent = true
   recentLimit = 10
 

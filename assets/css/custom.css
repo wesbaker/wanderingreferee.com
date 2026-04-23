@@ -22,6 +22,12 @@ header nav > div > a {
   gap: 6px;
 }
 
+/* Homepage article headings — larger than the text-xl default */
+.home-layout article h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 /* TOC sidebar width */
 @media (min-width: 1024px) {
   .lg\:max-w-xs {

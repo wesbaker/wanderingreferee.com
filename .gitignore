@@ -17,3 +17,6 @@
 *.swp
 *.swo
 docs/
+
+# Worktrees
+.worktrees/

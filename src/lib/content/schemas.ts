@@ -13,49 +13,27 @@ const optionalStringSchema = z.preprocess((value) => {
 
 export const postSchema = z.object({
   title: z.string().min(1),
-  description: optionalStringSchema,
-  keywords: tagsSchema.optional(),
   date: z.coerce.date(),
-  lastmod: z.coerce.date().optional(),
-  draft: z.boolean().default(false),
-  summary: optionalStringSchema,
+  description: optionalStringSchema,
   tags: tagsSchema,
+  draft: z.boolean().default(false),
   image: optionalStringSchema,
-  feature: optionalStringSchema,
-  featureAlt: optionalStringSchema,
-  cover: optionalStringSchema,
-  coverAlt: optionalStringSchema,
-  coverCaption: optionalStringSchema,
-  thumbnail: optionalStringSchema,
-  thumbnailAlt: optionalStringSchema,
   externalUrl: optionalStringSchema,
-  canonicalUrl: optionalStringSchema,
-  xml: z.boolean().default(true),
-  robots: optionalStringSchema,
-  showDate: z.boolean().optional(),
-  showDateUpdated: z.boolean().optional(),
-  showAuthor: z.boolean().optional(),
-  showReadingTime: z.boolean().optional(),
-  showTableOfContents: z.boolean().optional(),
-  showTaxonomies: z.boolean().optional(),
-  showWordCount: z.boolean().optional(),
-  showComments: z.boolean().optional(),
-  showPagination: z.boolean().optional(),
-  showBreadcrumbs: z.boolean().optional(),
-  showSummary: z.boolean().optional(),
-  showHeadingAnchors: z.boolean().optional(),
-  showEdit: z.boolean().optional(),
-  invertPagination: z.boolean().optional(),
-  sharingLinks: tagsSchema.optional(),
 });
 
 export type PostFrontmatter = z.infer<typeof postSchema>;
 
 export function slugFromMarkdownEntry(entry: string): string {
-  const filename = entry.split('/').filter(Boolean).at(-1);
+  const parts = entry.split('/').filter(Boolean);
+  const filename = parts.at(-1);
 
   if (!filename?.endsWith('.md')) {
     throw new Error(`Expected a Markdown entry path, received: ${entry}`);
+  }
+
+  // folder/index.md → use the folder name as the slug
+  if (filename === 'index.md' && parts.length >= 2) {
+    return parts.at(-2)!;
   }
 
   return filename.slice(0, -'.md'.length);

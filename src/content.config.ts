@@ -5,7 +5,7 @@ import { postSchema, slugFromMarkdownEntry } from './lib/content/schemas';
 const posts = defineCollection({
   loader: glob({
     base: './src/content/posts',
-    pattern: '*.md',
+    pattern: ['*.md', '*/index.md'],
     generateId: ({ entry }) => slugFromMarkdownEntry(entry),
   }),
   schema: postSchema,

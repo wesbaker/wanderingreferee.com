@@ -817,7 +817,7 @@ body {
     display: none;
   }
 
-  .feed-card-meta > span {
+  .feed-card-meta > span:not(.tag-link) {
     flex-basis: 100%;
   }
 }

@@ -37,6 +37,7 @@
   --gray: #666;
   --border: #ddd;
   --orange: #e06c00;
+  --orange-light: #fdf0e6;
   --bg: #fff;
   --text-secondary: #222;
   --text-muted: #333;
@@ -55,6 +56,7 @@
     --gray: #999;
     --border: #2a2a2a;
     --orange: #f09040;
+    --orange-light: #2d1a08;
     --bg: #111;
     --text-secondary: #d0d0d0;
     --text-muted: #bbb;
@@ -153,6 +155,16 @@ body {
 
 .tag:hover {
   border-color: var(--blue);
+}
+
+.tag-link {
+  background: var(--orange-light);
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .post-heading {

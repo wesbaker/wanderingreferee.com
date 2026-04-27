@@ -1,5 +1,0 @@
-{{- $icon := resources.Get "icons/link.svg" -}}
-{{- if $icon -}}
-  {{- $svg := replace $icon.Content "<svg " "<svg style=\"display:inline-block;vertical-align:middle;width:0.52em;height:0.52em\" " -}}
-  {{- $svg | safeHTML -}}
-{{- end -}}

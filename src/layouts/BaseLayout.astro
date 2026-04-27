@@ -118,6 +118,20 @@ const fullTitle = title === siteTitle ? title : `${title} - ${siteTitle}`;
           event.preventDefault();
           openSearch();
         }
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+          const results = Array.from(searchResults?.querySelectorAll<HTMLAnchorElement>('a.search-result') ?? []);
+          if (!results.length) return;
+          event.preventDefault();
+          const focused = document.activeElement;
+          const idx = results.indexOf(focused as HTMLAnchorElement);
+          if (event.key === 'ArrowDown') {
+            const next = idx === -1 || idx === results.length - 1 ? results[0] : results[idx + 1];
+            next?.focus();
+          } else {
+            const prev = idx <= 0 ? results[results.length - 1] : results[idx - 1];
+            prev?.focus();
+          }
+        }
       });
 
       searchInput?.addEventListener('input', async () => {

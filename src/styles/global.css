@@ -526,8 +526,10 @@ body {
   border-bottom: none;
 }
 
-.search-result:hover {
+.search-result:hover,
+.search-result:focus {
   background: var(--blue-light);
+  outline: none;
 }
 
 .search-result-meta {

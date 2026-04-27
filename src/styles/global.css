@@ -584,6 +584,7 @@ body {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -783,7 +784,7 @@ body {
   }
 
   .layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 48px;
     padding-top: 32px;
   }
@@ -798,5 +799,13 @@ body {
 
   .feed-card-title-icon {
     font-size: 22px;
+  }
+
+  .pagination-pages {
+    display: none;
+  }
+
+  .feed-card-meta > span {
+    flex-basis: 100%;
   }
 }

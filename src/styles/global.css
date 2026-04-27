@@ -804,4 +804,8 @@ body {
   .pagination-pages {
     display: none;
   }
+
+  .feed-card-meta > span {
+    flex-basis: 100%;
+  }
 }

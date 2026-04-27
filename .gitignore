@@ -1,12 +1,7 @@
-# Hugo build output
-/public/
-/resources/
-
-# Hugo module cache (not the same as _vendor/)
-/go/pkg/
-
-# Hugo lock file
-.hugo_build.lock
+# Astro
+node_modules/
+dist/
+.astro/
 
 # macOS
 .DS_Store

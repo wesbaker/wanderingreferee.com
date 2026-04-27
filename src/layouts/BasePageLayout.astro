@@ -1,0 +1,40 @@
+---
+import type { MarkdownHeading } from 'astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { getAllTags } from '../lib/content';
+import { homeIntro } from '../lib/site';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  headings?: MarkdownHeading[];
+  // MDX layout: frontmatter passes these under a `frontmatter` object
+  frontmatter?: { title?: string; description?: string };
+}
+
+const { headings = [], frontmatter } = Astro.props;
+const title = Astro.props.title ?? frontmatter?.title ?? '';
+const description = Astro.props.description ?? frontmatter?.description;
+const currentPath = Astro.url.pathname;
+const tags = await getAllTags();
+---
+
+<BaseLayout title={title} description={description}>
+  <Header currentPath={currentPath} />
+
+  <div class="layout">
+    <main>
+      <h1 class="post-heading">{title}</h1>
+      <div class="post-body">
+        <slot />
+      </div>
+    </main>
+
+    <Sidebar headings={headings} tags={tags} showAbout={true} aboutText={homeIntro} showSocial={true} socialLabel="Find me" />
+  </div>
+
+  <Footer />
+</BaseLayout>

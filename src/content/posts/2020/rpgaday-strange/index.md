@@ -7,7 +7,7 @@ description: I like fantasy that goes a little gonzo without tipping fully into 
 tags:
 - rpgaday
 - rpgs
-image: "/posts/rpgaday-strange/dinosaurs-of-the-wild-west.jpg"
+image: "./dinosaurs-of-the-wild-west.jpg"
 ---
 I love a good vanilla fantasy dungeon, with enemies you expect and an ending you can hope for. However, I also appreciate when things get strange, _though_ typically not with horror elements, they don't do much for me. What I do like is _gonzo_. As defined by Merriam-Webster:
 

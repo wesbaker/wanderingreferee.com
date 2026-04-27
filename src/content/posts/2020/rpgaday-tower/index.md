@@ -8,7 +8,7 @@ description: 'Tower of the Black Pearl is exactly the kind of Dungeon Crawl Clas
 tags:
 - rpgaday
 - rpgs
-image: "/posts/rpgaday-tower/tower-of-the-black-pearl.jpg"
+image: "./tower-of-the-black-pearl.jpg"
 ---
 _Spoiler warning: I'm going to talk about Tower of the Black Pearl, an adventure for Dungeon Crawl Classics. If you're part of my group, play DCC with me, and haven't gone into a tower that has risen from the seas, then you should turn away now._
 

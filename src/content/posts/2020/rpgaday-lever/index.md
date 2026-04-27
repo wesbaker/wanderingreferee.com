@@ -8,7 +8,7 @@ description: Players can solve a surprising number of problems with simple tools
 tags:
 - rpgaday
 - rpgs
-image: "/posts/rpgaday-lever/barred-door.png"
+image: "./barred-door.png"
 ---
 Levers make me think of simple machines: pulleys, wheel and axle, wedges, levers, and so forth. Some _very_ complex problems can be solved with these very tools. Recently in one of my games, players had to remove the bar from a barred door, kinda like this:
 

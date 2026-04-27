@@ -4,7 +4,7 @@ date: '2018-10-24 17:45:00 -0400'
 tags:
 - dungeon-crawl-classics
 - rpgs
-image: "/posts/blights-of-the-eastern-forest-rumor-table-and-loot/blights-of-the-eastern-forest-cover.jpg"
+image: "./blights-of-the-eastern-forest-cover.jpg"
 ---
 As part of [my review for _Sky ov Crimson Flame_](/posts/sky-ov-crimson-flame/), I mentioned that I wanted to make a rumor table and roll up some loot for the _Blights ov the Eastern Forest_ hex crawl. Here's what I've come up with.
 

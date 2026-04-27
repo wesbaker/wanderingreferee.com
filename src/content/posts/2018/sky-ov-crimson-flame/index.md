@@ -8,7 +8,7 @@ tags:
 - reviews
 - rpgs
 ---
-![Sky ov Crimson Flame cover image](/posts/sky-ov-crimson-flame/sky-ov-crimson-flame.jpg)
+![Sky ov Crimson Flame cover image](./sky-ov-crimson-flame.jpg)
 
 Some preamble: I buy a lot of RPG material. Rulebooks, modules, random tables, settings, zines, and so forth. I’m a bit of a hoarder when it comes to my hobbies, especially when I first dive in. I go for breadth and worry about depth later. This leads to a collection that’s stupidly big. Worse, I’m not actively reading these things because I’m still in discovery mode trying to find all of the great stuff. But, at some point, I have to dig in and start actually reading—and hopefully using—the stuff that I buy.
 
@@ -63,7 +63,7 @@ Clearly, I think this funnel is pretty good, almost great. It has a few things h
 
 ## Blights of the Eastern Forest
 
-![Hex map of the Eastern Forest](/posts/sky-ov-crimson-flame/the-eastern-forest.jpg)
+![Hex map of the Eastern Forest](./the-eastern-forest.jpg)
 
 The second half of the book is dedicated to _Blights of the Eastern Forest_ “a 1-level Mini-Campaign” in the form of a hex crawl. This was a stretch goal as [part of the Kickstarter campaign for the book](https://www.kickstarter.com/projects/thorinthompson/sky-ov-crimson-flame?ref=discovery) and it feels like a stretch goal. The various sites are inconsistent with some being deeply haunting places, another feeling something like a Grimm’s fairy tale, and then another having demonic gummy bears.
 

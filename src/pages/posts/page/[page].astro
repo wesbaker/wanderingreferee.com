@@ -7,11 +7,10 @@ import PostCard from '../../../components/PostCard.astro';
 import Sidebar from '../../../components/Sidebar.astro';
 import { getAllTags } from '../../../lib/content';
 import { mergeFeed, type FeedItem } from '../../../lib/feed';
-import { homeIntro } from '../../../lib/site';
+import { homeIntro, pageSize } from '../../../lib/site';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const pageSize = 10;
   const posts = await getCollection('posts', ({ data }) => !data.draft);
   const feed = mergeFeed<FeedItem>(
     posts.map((entry) => ({ type: 'post' as const, entry, date: entry.data.date })),

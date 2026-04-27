@@ -8,7 +8,7 @@ description: I hadn't really thought about how a battle standard could work in a
 tags:
 - rpgaday
 - rpgs
-image: "/posts/rpgaday-banner/banner.jpg"
+image: "./banner.jpg"
 ---
 The first thing I think of when I hear banner is something like this:
 

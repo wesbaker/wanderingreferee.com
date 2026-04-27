@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+import { formatPostDate } from '../lib/content';
 import { excerptFromMarkdown } from '../lib/feed';
 
 interface Props {
@@ -7,17 +9,12 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const date = post.data.date.toLocaleDateString('en-US', {
-  month: 'short',
-  day: 'numeric',
-  year: 'numeric',
-});
+const date = formatPostDate(post.data.date);
 const tags = post.data.tags ?? [];
 const intro = post.data.description || excerptFromMarkdown(post.body);
-const href = post.data.externalUrl || `/posts/${post.id}/`;
-const isLinkPost = Boolean(post.data.externalUrl);
 const permalink = `/posts/${post.id}/`;
-const postUrl = `/posts/${post.id}/`;
+const href = post.data.externalUrl || permalink;
+const isLinkPost = Boolean(post.data.externalUrl);
 ---
 
 <article class="feed-card">
@@ -33,8 +30,8 @@ const postUrl = `/posts/${post.id}/`;
   </div>
   {
     post.data.image && (
-      <a href={postUrl} class="feed-card-feature" aria-label={`Read ${post.data.title}`}>
-        <img src={post.data.image} alt="" loading="lazy" />
+      <a href={permalink} class="feed-card-feature" aria-label={`Read ${post.data.title}`}>
+        <Image src={post.data.image} alt="" loading="lazy" />
       </a>
     )
   }

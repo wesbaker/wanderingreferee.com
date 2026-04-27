@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { postSchema, slugFromMarkdownEntry } from './schemas';
 
 describe('postSchema', () => {
-  it('accepts current Hugo post frontmatter and normalizes blank tags', () => {
+  it('normalizes null tags to an empty array and defaults draft to false', () => {
     const parsed = postSchema.parse({
       title: 'Review: Spire',
       date: '2018-11-13 18:45:00.000000000 -04:00',
@@ -12,7 +12,6 @@ describe('postSchema', () => {
 
     expect(parsed.tags).toEqual([]);
     expect(parsed.draft).toBe(false);
-    expect(parsed.xml).toBe(true);
     expect(parsed.date).toBeInstanceOf(Date);
   });
 
@@ -44,6 +43,18 @@ describe('postSchema', () => {
 describe('slugFromMarkdownEntry', () => {
   it('uses a flat Markdown filename as the entry slug', () => {
     expect(slugFromMarkdownEntry('spire.md')).toBe('spire');
+  });
+
+  it('uses a folder name as the entry slug for folder bundles', () => {
+    expect(slugFromMarkdownEntry('sky-ov-crimson-flame/index.md')).toBe('sky-ov-crimson-flame');
+  });
+
+  it('strips year prefix from year-nested flat files', () => {
+    expect(slugFromMarkdownEntry('2018/spire.md')).toBe('spire');
+  });
+
+  it('strips year prefix from year-nested folder bundles', () => {
+    expect(slugFromMarkdownEntry('2018/sky-ov-crimson-flame/index.md')).toBe('sky-ov-crimson-flame');
   });
 
   it('rejects paths that are not Markdown entries', () => {

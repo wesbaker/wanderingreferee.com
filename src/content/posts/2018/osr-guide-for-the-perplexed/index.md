@@ -88,4 +88,4 @@ It’s your game (but I’d pick ascending AC because it fits my players’ sens
 
 > The OSRest picture I could post on short notice:
 
-![Doug Kovacs art](/posts/osr-guide-for-the-perplexed/kovacs-dcc.jpg)
+![Doug Kovacs art](./kovacs-dcc.jpg)

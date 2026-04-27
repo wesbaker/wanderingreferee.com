@@ -8,7 +8,7 @@ tags:
 - reviews
 - rpgs
 ---
-![Cover of The Stone Heir](/posts/the-stone-heir/the-stone-heir.jpg)
+![Cover of The Stone Heir](./the-stone-heir.jpg)
 
 I really enjoyed half of this book, namely the **Pigs from the Pit** (a transitional adventure for level 0 characters going to level 1) and the Adventuring Ties.
 

@@ -8,12 +8,16 @@ import { homeIntro } from '../lib/site';
 import BaseLayout from './BaseLayout.astro';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
   headings?: MarkdownHeading[];
+  // MDX layout: frontmatter passes these under a `frontmatter` object
+  frontmatter?: { title?: string; description?: string };
 }
 
-const { title, description, headings = [] } = Astro.props;
+const { headings = [], frontmatter } = Astro.props;
+const title = Astro.props.title ?? frontmatter?.title ?? '';
+const description = Astro.props.description ?? frontmatter?.description;
 const currentPath = Astro.url.pathname;
 const tags = await getAllTags();
 ---

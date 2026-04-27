@@ -1,4 +1,5 @@
 ---
+import { sidebarAbout } from '../lib/site';
 import TOC from './TOC.astro';
 
 interface Heading {
@@ -20,7 +21,7 @@ const {
   headings = [],
   tags = [],
   showAbout = false,
-  aboutText = 'Tabletop games, RPGs, and miniature painting. Running OSR campaigns for my kids. Painting too slowly. Based in Virginia.',
+  aboutText = sidebarAbout,
   showSocial = false,
   socialLabel = 'Find me',
 } = Astro.props;

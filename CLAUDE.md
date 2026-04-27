@@ -20,9 +20,9 @@ Cloudflare Pages build: `build.sh` → runs `npm run build`. Output dir: `dist`.
 
 ## Content Structure
 
-Posts live in `src/content/posts/slug.md` (flat, no year directories).
-Link posts live in `src/content/posts/slug.md` with a `link:` field in frontmatter.
-URLs are `/posts/slug/`.
+Posts live in `src/content/posts/YYYY/slug.md` or `src/content/posts/YYYY/slug/index.md` (year subdirectories).
+Posts with co-located images use folder bundles: `src/content/posts/YYYY/slug/index.md` + images in the same folder.
+Link posts use an `externalUrl:` field in frontmatter. All URLs are `/posts/slug/` (year is ignored for routing).
 
 Content collection schema is in `src/content.config.ts`.
 
@@ -35,7 +35,8 @@ Content collection schema is in `src/content.config.ts`.
 | `description` | — | HTML meta description and feed summary |
 | `tags` | — | Array of strings; defaults to `[]` |
 | `draft` | — | Excludes from build when `true` |
-| `link` | — | External URL; makes this a link post |
+| `image` | — | Co-located image path e.g. `./cover.jpg`; processed by Astro's `image()` helper |
+| `externalUrl` | — | External URL; makes this a link post |
 
 ## Architecture
 
@@ -46,10 +47,9 @@ src/
   lib/               content.ts (helpers), feed.ts, site.ts
   pages/             index, about, posts/[slug], tags/[tag], rss.xml
   styles/            global.css (all CSS; no scoped styles)
-  content/posts/     markdown content
+  content/posts/     markdown content (YYYY/slug.md or YYYY/slug/index.md)
 public/
   fonts/             Cartridge woff2 files
-  covers/            post cover images
   favicon*, site.webmanifest
 ```
 

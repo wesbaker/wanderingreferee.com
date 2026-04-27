@@ -3,7 +3,7 @@
   src: url("/fonts/Cartridge-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   src: url("/fonts/Cartridge-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   src: url("/fonts/Cartridge-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: optional;
 }
 
 *,
@@ -157,7 +157,7 @@ body {
 
 .post-heading {
   font-family: "Cartridge", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 44px;
   line-height: 1.05;
   letter-spacing: -0.5px;
@@ -202,6 +202,11 @@ body {
   font-size: 19px;
   line-height: 1.8;
   color: var(--text-secondary);
+}
+
+.post-body img {
+  max-width: 100%;
+  height: auto;
 }
 
 .post-body p + p {
@@ -595,7 +600,7 @@ body {
 
 .feed-card-title {
   font-family: "Cartridge", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 26px;
   line-height: 1.1;
   letter-spacing: -0.3px;

@@ -1,9 +1,11 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import type { MarkdownHeading } from 'astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Sidebar from '../components/Sidebar.astro';
-import { getAllTags } from '../lib/content';
+import { formatPostDate, getAllTags } from '../lib/content';
 import BaseLayout from './BaseLayout.astro';
 
 interface Props {
@@ -11,7 +13,7 @@ interface Props {
   description?: string;
   date: Date;
   tags?: string[];
-  image?: string;
+  image?: ImageMetadata;
   headings: MarkdownHeading[];
   isLink?: boolean;
   externalUrl?: string;
@@ -27,11 +29,7 @@ const {
   isLink = false,
   externalUrl,
 } = Astro.props;
-const formattedDate = date.toLocaleDateString('en-US', {
-  month: 'short',
-  day: 'numeric',
-  year: 'numeric',
-});
+const formattedDate = formatPostDate(date);
 const currentPath = Astro.url.pathname;
 const sidebarTags = await getAllTags();
 ---
@@ -67,7 +65,7 @@ const sidebarTags = await getAllTags();
       {
         image && (
           <div class="post-feature">
-            <img src={image} alt="" loading="lazy" />
+            <Image src={image} alt="" loading="lazy" />
           </div>
         )
       }

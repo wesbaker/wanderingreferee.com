@@ -10,8 +10,10 @@
 #
 # Flags:
 #   --link <url>   Makes this a link post (adds externalUrl to frontmatter)
-#   --folder       Creates src/content/posts/slug/index.md instead of slug.md
+#   --folder       Creates src/content/posts/YYYY/slug/index.md instead of slug.md
 #                  Use for posts that will have co-located images
+#
+# Posts are created under src/content/posts/YYYY/ where YYYY is the current year.
 
 require 'date'
 require 'fileutils'
@@ -33,7 +35,9 @@ slug = title.downcase
              .sub(/^-+/, '')
              .sub(/-+$/, '')
 
-base = File.join(__dir__, 'src', 'content', 'posts')
+year = Date.today.year.to_s
+base = File.join(__dir__, 'src', 'content', 'posts', year)
+FileUtils.mkdir_p(base)
 
 if folder_mode
   dir  = File.join(base, slug)

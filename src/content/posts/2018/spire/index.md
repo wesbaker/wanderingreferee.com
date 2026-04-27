@@ -8,7 +8,7 @@ tags:
 - reviews
 - rpgs
 ---
-![Cover of Spire](/posts/spire/cover.jpg)
+![Cover of Spire](./cover.jpg)
 
 To date, I've played in exactly one Powered by the Apocalypse RPG and only one session: _The Sprawl_. I thoroughly enjoyed myself with that, but I preface this review with that so you understand that I haven't played this game and I haven't seen many other PbtA games.
 
@@ -40,7 +40,7 @@ Beyond that, there are some mechanics for Bonds between different player charact
 
 ### Playbooks
 
-![Firebrand character from Spire](/posts/spire/firebrand.jpg)
+![Firebrand character from Spire](./firebrand.jpg)
 
 Like most PbtA games, each character will pick a playbook. However, there aren't the typical stats in most PbtA games, instead you have skills, domains, and resistances (and resistance slots). Skills and domains are binary: you either have them or you don't. Resistance slots are numerical and function as "armor" to a given resistance.
 
@@ -61,7 +61,7 @@ Every playbook feels unique and decidedly non-traditional. If you're bored of yo
 
 ## Districts and Factions
 
-![Map of Spire](/posts/spire/map.jpg)
+![Map of Spire](./map.jpg)
 
 The meat of _Spire_ is its ~90 pages of district and faction information. I remember reading somewhere that the designers wanted to create a Powered by the Apocalypse game that had an established setting and between the playbooks and these pages, they pretty much nailed it. Sure, you could move these things to a different game, but they're so consistent here that it'd be strange to.
 

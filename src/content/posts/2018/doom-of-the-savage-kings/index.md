@@ -8,7 +8,7 @@ tags:
 - reviews
 - rpgs
 ---
-![Cover of Doom of the Savage Kings](/posts/doom-of-the-savage-kings/doom-of-the-savage-kings.jpg)
+![Cover of Doom of the Savage Kings](./doom-of-the-savage-kings.jpg)
 
 This adventure offers three things: a nicely fleshed out town with a serious problem that needs to be dealt with soon and a lingering sense of paranoia, a small dungeon filled with traps, tricks, and a fight or two filled with surprises, and a “boss” monster that must be researched before taking it on.
 

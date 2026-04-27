@@ -1,0 +1,8 @@
+---
+import { firstPostYear } from '../lib/site';
+
+const year = new Date().getFullYear();
+const yearRange = year > firstPostYear ? `${firstPostYear}-${year}` : String(year);
+---
+
+<footer class="site-footer">&copy; {yearRange} Wes Baker &middot; Wandering Referee</footer>

@@ -1,9 +1,0 @@
-[module]
-  [[module.imports]]
-    path = "github.com/jpanther/congo/v2"
-
-[taxonomies]
-  tag = "tags"
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]

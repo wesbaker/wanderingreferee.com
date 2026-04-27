@@ -1,0 +1,84 @@
+---
+import type { MarkdownHeading } from 'astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { getAllTags } from '../lib/content';
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  date: Date;
+  tags?: string[];
+  image?: string;
+  headings: MarkdownHeading[];
+  isLink?: boolean;
+  externalUrl?: string;
+}
+
+const {
+  title,
+  description,
+  date,
+  tags = [],
+  image,
+  headings,
+  isLink = false,
+  externalUrl,
+} = Astro.props;
+const formattedDate = date.toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+});
+const currentPath = Astro.url.pathname;
+const sidebarTags = await getAllTags();
+---
+
+<BaseLayout title={title} description={description}>
+  <Header currentPath={currentPath} />
+
+  <div class="layout">
+    <main>
+      <div class="post-meta">
+        <span>{formattedDate}</span>
+        {
+          tags.map((tag) => (
+            <a href={`/tags/${tag}`} class="tag">
+              {tag}
+            </a>
+          ))
+        }
+      </div>
+
+      {
+        isLink && externalUrl ? (
+          <h1 class="post-heading">
+            <a href={externalUrl} rel="noopener noreferrer">
+              {title}
+            </a>
+          </h1>
+        ) : (
+          <h1 class="post-heading">{title}</h1>
+        )
+      }
+
+      {
+        image && (
+          <div class="post-feature">
+            <img src={image} alt="" loading="lazy" />
+          </div>
+        )
+      }
+
+      <div class="post-body">
+        <slot />
+      </div>
+    </main>
+
+    <Sidebar headings={headings} tags={sidebarTags} showAbout={true} showSocial={true} socialLabel="About" />
+  </div>
+
+  <Footer />
+</BaseLayout>

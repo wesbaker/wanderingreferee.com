@@ -1,0 +1,53 @@
+---
+interface Props {
+  currentPage: number;
+  lastPage: number;
+  firstPageHref?: string;
+  pageBaseHref?: string;
+}
+
+const { currentPage, lastPage, firstPageHref = '/', pageBaseHref = '/posts' } = Astro.props;
+const normalizedBase = pageBaseHref.endsWith('/') ? pageBaseHref.slice(0, -1) : pageBaseHref;
+const pageHref = (page: number) => (page === 1 ? firstPageHref : `${normalizedBase}/page/${page}/`);
+const newerPage = currentPage > 1 ? currentPage - 1 : undefined;
+const olderPage = currentPage < lastPage ? currentPage + 1 : undefined;
+const pages = Array.from({ length: lastPage }, (_, index) => index + 1);
+---
+
+<nav class="pagination" aria-label="Pagination">
+  {
+    newerPage ? (
+      <a href={pageHref(newerPage)} class="pagination-direction">
+        Newer
+      </a>
+    ) : (
+      <span class="pagination-direction">Newer</span>
+    )
+  }
+
+  <div class="pagination-pages">
+    {
+      pages.map((page) =>
+        page === currentPage ? (
+          <span class="pagination-page current" aria-current="page">
+            {page}
+          </span>
+        ) : (
+          <a href={pageHref(page)} class="pagination-page">
+            {page}
+          </a>
+        ),
+      )
+    }
+  </div>
+
+  {
+    olderPage ? (
+      <a href={pageHref(olderPage)} class="pagination-direction">
+        Older
+      </a>
+    ) : (
+      <span class="pagination-direction">Older</span>
+    )
+  }
+</nav>

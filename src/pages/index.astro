@@ -1,17 +1,39 @@
 ---
+import { getCollection } from 'astro:content';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Pagination from '../components/Pagination.astro';
+import PostCard from '../components/PostCard.astro';
+import Sidebar from '../components/Sidebar.astro';
+import { getAllTags } from '../lib/content';
+import { mergeFeed, type FeedItem } from '../lib/feed';
+import { homeIntro } from '../lib/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+const pageSize = 10;
+const posts = await getCollection('posts', ({ data }) => !data.draft);
+const feed = mergeFeed<FeedItem>(
+  posts.map((entry) => ({ type: 'post' as const, entry, date: entry.data.date })),
+);
+const tags = await getAllTags();
+const pageData = feed.slice(0, pageSize);
+const lastPage = Math.ceil(feed.length / pageSize);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Wandering Referee">
+  <Header currentPath="/" />
+
+  <div class="layout">
+    <main class="feed">
+      {
+        pageData.map((item) => <PostCard post={item.entry} />)
+      }
+
+      <Pagination currentPage={1} lastPage={lastPage} />
+    </main>
+
+    <Sidebar tags={tags} showAbout={true} aboutText={homeIntro} showSocial={true} />
+  </div>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import Footer from '../../../../components/Footer.astro';
+import Header from '../../../../components/Header.astro';
+import Pagination from '../../../../components/Pagination.astro';
+import PostCard from '../../../../components/PostCard.astro';
+import Sidebar from '../../../../components/Sidebar.astro';
+import { getAllTags } from '../../../../lib/content';
+import { mergeFeed, type FeedItem } from '../../../../lib/feed';
+import { homeIntro } from '../../../../lib/site';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const pageSize = 10;
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+
+  return tags.flatMap((tag) => {
+    const feed = mergeFeed<FeedItem>(
+      posts
+        .filter((post) => post.data.tags.includes(tag))
+        .map((entry) => ({ type: 'post' as const, entry, date: entry.data.date })),
+    );
+    const lastPage = Math.ceil(feed.length / pageSize);
+
+    return Array.from({ length: Math.max(lastPage - 1, 0) }, (_, index) => {
+      const currentPage = index + 2;
+
+      return {
+        params: { tag, page: String(currentPage) },
+        props: {
+          currentPage,
+          lastPage,
+          pageData: feed.slice((currentPage - 1) * pageSize, currentPage * pageSize),
+          tag,
+        },
+      };
+    });
+  });
+}
+
+const { currentPage, lastPage, pageData, tag } = Astro.props;
+const tags = await getAllTags();
+---
+
+<BaseLayout title={`Tag: ${tag} - Page ${currentPage}`}>
+  <Header currentPath={`/tags/${tag}`} />
+  <div class="layout">
+    <main>
+      <h1 class="post-heading">{tag}</h1>
+      <div class="feed">
+        {pageData.map((item: FeedItem) => <PostCard post={item.entry} />)}
+      </div>
+      <Pagination currentPage={currentPage} lastPage={lastPage} firstPageHref={`/tags/${tag}/`} pageBaseHref={`/tags/${tag}`} />
+    </main>
+    <Sidebar tags={tags} showAbout={true} aboutText={homeIntro} showSocial={true} />
+  </div>
+  <Footer />
+</BaseLayout>

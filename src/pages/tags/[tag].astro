@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Pagination from '../../components/Pagination.astro';
+import PostCard from '../../components/PostCard.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { getAllTags } from '../../lib/content';
+import { mergeFeed, type FeedItem } from '../../lib/feed';
+import { homeIntro, pageSize } from '../../lib/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const tags = new Set(posts.flatMap((post) => post.data.tags));
+
+  return [...tags].map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      posts: posts.filter((post) => post.data.tags.includes(tag)),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+const tags = await getAllTags();
+const feed = mergeFeed<FeedItem>(
+  posts.map((entry) => ({ type: 'post' as const, entry, date: entry.data.date })),
+);
+const pageData = feed.slice(0, pageSize);
+const lastPage = Math.ceil(feed.length / pageSize);
+---
+
+<BaseLayout title={`Tag: ${tag}`}>
+  <Header currentPath={`/tags/${tag}`} />
+  <div class="layout">
+    <main>
+      <h1 class="post-heading">{tag}</h1>
+      <div class="feed">
+        {
+          pageData.map((item: FeedItem) => <PostCard post={item.entry} />)
+        }
+      </div>
+      {lastPage > 1 && <Pagination currentPage={1} lastPage={lastPage} firstPageHref={`/tags/${tag}/`} pageBaseHref={`/tags/${tag}`} />}
+    </main>
+    <Sidebar tags={tags} showAbout={true} aboutText={homeIntro} showSocial={true} />
+  </div>
+  <Footer />
+</BaseLayout>

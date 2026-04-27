@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Sidebar from '../../components/Sidebar.astro';
+import { getAllTags } from '../../lib/content';
+import { homeIntro } from '../../lib/site';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = await getCollection('posts', ({ data }) => !data.draft);
+
+const tagCounts = new Map<string, number>();
+for (const entry of posts) {
+  for (const tag of entry.data.tags) {
+    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+  }
+}
+
+const sortedTags = [...tagCounts.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+const tags = await getAllTags();
+---
+
+<BaseLayout title="Tags">
+  <Header currentPath="/tags" />
+  <div class="layout">
+    <main>
+      <h1 class="post-heading">Tags</h1>
+      <div class="tags-list">
+        {
+          sortedTags.map(([tag, count]) => (
+            <a href={`/tags/${tag}`} class="tags-list-item">
+              {tag} <span class="count">({count})</span>
+            </a>
+          ))
+        }
+      </div>
+    </main>
+    <Sidebar tags={tags} showAbout={true} aboutText={homeIntro} showSocial={true} />
+  </div>
+  <Footer />
+</BaseLayout>

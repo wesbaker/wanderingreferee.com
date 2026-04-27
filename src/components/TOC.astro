@@ -1,0 +1,26 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+}
+
+const { headings } = Astro.props;
+const filtered = headings.filter((heading) => heading.depth === 2 || heading.depth === 3);
+---
+
+{
+  filtered.length > 0 && (
+    <div class="toc">
+      {filtered.map((heading) => (
+        <div class={`toc-item${heading.depth === 3 ? ' h3' : ''}`}>
+          <a href={`#${heading.slug}`}>{heading.text}</a>
+        </div>
+      ))}
+    </div>
+  )
+}

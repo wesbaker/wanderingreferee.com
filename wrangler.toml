@@ -1,5 +1,5 @@
 name = "wanderingreferee"
-pages_build_output_dir = "public"
+pages_build_output_dir = "dist"
 
 [vars]
-HUGO_VERSION = "0.160.1"
+HUGO_VERSION = ""

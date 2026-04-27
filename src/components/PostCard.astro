@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { formatPostDate } from '../lib/content';
+import { excerptFromMarkdown } from '../lib/feed';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const date = formatPostDate(post.data.date);
+const tags = post.data.tags ?? [];
+const intro = post.data.description || excerptFromMarkdown(post.body);
+const permalink = `/posts/${post.id}/`;
+const href = post.data.externalUrl || permalink;
+const isLinkPost = Boolean(post.data.externalUrl);
+---
+
+<article class="feed-card">
+  <div class="feed-card-meta">
+    <span>{date}</span>
+    {
+      tags.slice(0, 2).map((tag) => (
+        <a href={`/tags/${tag}`} class="tag">
+          {tag}
+        </a>
+      ))
+    }
+  </div>
+  {
+    post.data.image && (
+      <a href={permalink} class="feed-card-feature" aria-label={`Read ${post.data.title}`}>
+        <Image src={post.data.image} alt="" loading="lazy" />
+      </a>
+    )
+  }
+  <div class:list={['feed-card-title-row', !isLinkPost && 'standard']}>
+    <a href={href} class:list={['feed-card-title', isLinkPost && 'external']} rel={isLinkPost ? 'noopener noreferrer' : undefined}>
+      {post.data.title}
+    </a>
+    {
+      isLinkPost && (
+        <>
+          <a href={href} class="feed-card-title-icon external-link" rel="noopener noreferrer" aria-label={`External link for ${post.data.title}`}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 17 17 7"></path>
+              <path d="M9 7h8v8"></path>
+            </svg>
+          </a>
+          <a href={permalink} class="feed-card-title-icon permalink" aria-label={`Permalink to ${post.data.title}`}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10 13a5 5 0 0 0 7.1 0l1.4-1.4a5 5 0 0 0-7.1-7.1l-.8.8"></path>
+              <path d="M14 11a5 5 0 0 0-7.1 0l-1.4 1.4a5 5 0 0 0 7.1 7.1l.8-.8"></path>
+            </svg>
+          </a>
+        </>
+      )
+    }
+  </div>
+  {intro && <p class="feed-card-summary">{intro}</p>}
+</article>

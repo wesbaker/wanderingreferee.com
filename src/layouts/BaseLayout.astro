@@ -1,0 +1,162 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const siteTitle = 'Wandering Referee';
+const fullTitle = title === siteTitle ? title : `${title} - ${siteTitle}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="preload" href="/fonts/Cartridge-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Cartridge-Semibold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Cartridge-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="alternate" type="application/rss+xml" title="Wandering Referee" href="/rss.xml" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <slot />
+
+    <div class="search-backdrop" id="search-backdrop">
+      <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+        <div class="search-input-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+          <input class="search-input" id="search-input" type="search" placeholder="Search posts..." autocomplete="off" />
+          <button class="search-close" id="search-close" type="button">ESC</button>
+        </div>
+        <div class="search-results" id="search-results"></div>
+      </div>
+    </div>
+
+    <script>
+      type SearchResult = {
+        data: () => Promise<{
+          url: string;
+          excerpt: string;
+          meta?: {
+            date?: string;
+            title?: string;
+          };
+        }>;
+      };
+
+      type Pagefind = {
+        search: (query: string) => Promise<{ results: SearchResult[] }>;
+      };
+
+      type PagefindModule = Pagefind & {
+        init?: () => Promise<void>;
+      };
+
+      const searchBackdrop = document.getElementById('search-backdrop');
+      const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
+      const searchClose = document.getElementById('search-close');
+      const searchResults = document.getElementById('search-results');
+      let pagefindPromise: Promise<PagefindModule | null> | undefined;
+
+      async function loadPagefind() {
+        pagefindPromise ??= (async () => {
+          try {
+            const importPagefind = new Function('return import("/pagefind/pagefind.js")') as () => Promise<PagefindModule>;
+            const pagefind = await importPagefind();
+            await pagefind.init?.();
+            return pagefind;
+          } catch {
+            if (searchResults) {
+              searchResults.innerHTML = '<div class="search-empty">Search index unavailable. Run npm run build, then npm run preview.</div>';
+            }
+            return null;
+          }
+        })();
+
+        return pagefindPromise;
+      }
+
+      function openSearch() {
+        searchBackdrop?.classList.add('open');
+        searchInput?.focus();
+      }
+
+      function closeSearch() {
+        searchBackdrop?.classList.remove('open');
+      }
+
+      (window as Window & { openSearch?: () => void }).openSearch = openSearch;
+
+      searchBackdrop?.addEventListener('click', (event) => {
+        if (event.target === searchBackdrop) closeSearch();
+      });
+
+      searchClose?.addEventListener('click', () => closeSearch());
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeSearch();
+        if ((event.metaKey || event.ctrlKey) && event.key === 'k') {
+          event.preventDefault();
+          openSearch();
+        }
+      });
+
+      searchInput?.addEventListener('input', async () => {
+        const query = searchInput.value.trim();
+        if (!searchResults) return;
+        if (!query) {
+          searchResults.innerHTML = '';
+          return;
+        }
+
+        const pagefind = await loadPagefind();
+        if (!pagefind) return;
+
+        let data;
+        try {
+          const results = await pagefind.search(query);
+          data = await Promise.all(results.results.slice(0, 8).map((result) => result.data()));
+        } catch {
+          searchResults.innerHTML = '<div class="search-empty">Search index unavailable. Run npm run build, then npm run preview.</div>';
+          return;
+        }
+
+        if (data.length === 0) {
+          searchResults.innerHTML = '<div class="search-empty">No results found.</div>';
+          return;
+        }
+
+        searchResults.innerHTML = data
+          .map(
+            (item) => `
+              <a href="${item.url}" class="search-result">
+                <div class="search-result-meta">${item.meta?.date ?? ''}</div>
+                <div class="search-result-title">${item.meta?.title ?? ''}</div>
+                <div class="search-result-excerpt">${item.excerpt}</div>
+              </a>
+            `,
+          )
+          .join('');
+      });
+    </script>
+  </body>
+</html>

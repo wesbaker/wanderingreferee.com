@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import type { MarkdownHeading } from 'astro';
 import Footer from '../components/Footer.astro';
@@ -31,10 +31,16 @@ const {
 } = Astro.props;
 const formattedDate = formatPostDate(date);
 const currentPath = Astro.url.pathname;
+const canonicalUrl = new URL(currentPath, Astro.site).toString();
 const sidebarTags = await getAllTags();
+let ogImage: string | undefined;
+if (image) {
+  const processed = await getImage({ src: image, width: 1200, format: 'jpeg' });
+  ogImage = processed.src;
+}
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={ogImage} canonicalUrl={canonicalUrl} type="article">
   <Header currentPath={currentPath} />
 
   <div class="layout">

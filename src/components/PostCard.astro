@@ -22,7 +22,7 @@ const isLinkPost = Boolean(post.data.externalUrl);
     <span>{date}</span>
     {isLinkPost && <span class="tag-link">Link</span>}
     {
-      tags.slice(0, 2).map((tag) => (
+      tags.map((tag) => (
         <a href={`/tags/${tag}`} class="tag">
           {tag}
         </a>

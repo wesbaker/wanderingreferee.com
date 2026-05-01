@@ -7,7 +7,7 @@ import PostCard from '../../../components/PostCard.astro';
 import Sidebar from '../../../components/Sidebar.astro';
 import { getAllTags } from '../../../lib/content';
 import { mergeFeed, type FeedItem } from '../../../lib/feed';
-import { homeIntro, pageSize } from '../../../lib/site';
+import { homeIntro, pageSize, siteDescription } from '../../../lib/site';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
@@ -35,7 +35,10 @@ export async function getStaticPaths() {
 const { currentPage, lastPage, pageData, tags } = Astro.props;
 ---
 
-<BaseLayout title={`Posts - Page ${currentPage}`}>
+<BaseLayout
+  title={`Posts - Page ${currentPage}`}
+  description={`Page ${currentPage} of posts on Wandering Referee. ${siteDescription}`}
+>
   <Header currentPath="/" />
 
   <div class="layout">

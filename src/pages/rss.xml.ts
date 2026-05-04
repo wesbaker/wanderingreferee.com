@@ -2,8 +2,11 @@ import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import type { APIContext } from 'astro';
 
+const AUTHOR_ID = 'wes';
+
 export async function GET(context: APIContext) {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const siteUrl = (context.site ?? new URL('https://wanderingreferee.com')).origin;
 
   const items = posts
     .map((post) => ({
@@ -11,6 +14,7 @@ export async function GET(context: APIContext) {
       pubDate: post.data.date,
       description: post.data.description ?? '',
       link: `/posts/${post.id}/`,
+      customData: `<byline:author ref="${AUTHOR_ID}"/><byline:perspective>personal</byline:perspective>`,
     }))
     .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
 
@@ -18,7 +22,18 @@ export async function GET(context: APIContext) {
     title: 'Wandering Referee',
     description: 'Tabletop games, RPGs, and miniature painting.',
     site: context.site ?? 'https://wanderingreferee.com',
+    xmlns: { byline: 'https://bylinespec.org/1.0' },
     items,
-    customData: '<language>en-us</language>',
+    customData: `<language>en-us</language>
+<byline:contributors>
+  <byline:person id="${AUTHOR_ID}">
+    <byline:name>Wes Baker</byline:name>
+    <byline:context>Tabletop gamer, RPG referee, and miniature painter based in Fredericksburg, VA.</byline:context>
+    <byline:url>${siteUrl}</byline:url>
+    <byline:profile href="https://hachyderm.io/@wesbaker" rel="mastodon"/>
+    <byline:profile href="https://bsky.app/profile/wesbaker.com" rel="bluesky"/>
+    <byline:profile href="https://github.com/wesbaker" rel="github"/>
+  </byline:person>
+</byline:contributors>`,
   });
 }

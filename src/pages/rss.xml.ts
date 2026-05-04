@@ -25,13 +25,15 @@ export async function GET(context: APIContext) {
     xmlns: { byline: 'https://bylinespec.org/1.0' },
     items,
     customData: `<language>en-us</language>
-<byline:person id="${AUTHOR_ID}">
-  <byline:name>Wes Baker</byline:name>
-  <byline:context>Tabletop gamer, RPG referee, and miniature painter based in Fredericksburg, VA.</byline:context>
-  <byline:url>${siteUrl}</byline:url>
-  <byline:profile href="https://hachyderm.io/@wesbaker" rel="mastodon"/>
-  <byline:profile href="https://bsky.app/profile/wesbaker.com" rel="bluesky"/>
-  <byline:profile href="https://github.com/wesbaker" rel="github"/>
-</byline:person>`,
+<byline:contributors>
+  <byline:person id="${AUTHOR_ID}">
+    <byline:name>Wes Baker</byline:name>
+    <byline:context>Tabletop gamer, RPG referee, and miniature painter based in Fredericksburg, VA.</byline:context>
+    <byline:url>${siteUrl}</byline:url>
+    <byline:profile href="https://hachyderm.io/@wesbaker" rel="mastodon"/>
+    <byline:profile href="https://bsky.app/profile/wesbaker.com" rel="bluesky"/>
+    <byline:profile href="https://github.com/wesbaker" rel="github"/>
+  </byline:person>
+</byline:contributors>`,
   });
 }

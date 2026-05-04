@@ -26,7 +26,7 @@ export async function GET(context: APIContext) {
   <byline:name>Wes Baker</byline:name>
   <byline:context>Tabletop gamer, RPG referee, and miniature painter based in Fredericksburg, VA.</byline:context>
   <byline:url>https://wanderingreferee.com</byline:url>
-  <byline:profile href="https://dice.camp/@wesbaker" rel="mastodon"/>
+  <byline:profile href="https://hachyderm.io/@wesbaker" rel="mastodon"/>
   <byline:profile href="https://bsky.app/profile/wesbaker.com" rel="bluesky"/>
   <byline:profile href="https://github.com/wesbaker" rel="github"/>
 </byline:person>`,

@@ -37,6 +37,16 @@ Content collection schema is in `src/content.config.ts`.
 | `draft` | — | Excludes from build when `true` |
 | `image` | — | Co-located image path e.g. `./cover.jpg`; processed by Astro's `image()` helper |
 | `externalUrl` | — | External URL; makes this a link post |
+| `subtitle` | — | Optional subtitle rendered below the `<h1>` as a muted `<p>` inside `<hgroup>` |
+
+## Style Guide
+
+`src/content/posts/2026/style-guide/index.md` is a draft page that demonstrates every visual element used on posts. Any time you add or change a style that affects post presentation — new frontmatter fields, new CSS classes, layout changes — add a representative example to the style guide. Preview it with:
+
+```bash
+npm run dev
+# visit http://localhost:4321/posts/style-guide/
+```
 
 ## Architecture
 

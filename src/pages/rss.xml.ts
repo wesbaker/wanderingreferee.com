@@ -1,11 +1,12 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 import type { APIContext } from 'astro';
+import { showDrafts } from '../lib/content';
 
 const AUTHOR_ID = 'wes';
 
 export async function GET(context: APIContext) {
-  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const posts = await getCollection('posts', ({ data }) => !data.draft || showDrafts());
   const siteUrl = (context.site ?? new URL('https://wanderingreferee.com')).origin;
 
   const items = posts

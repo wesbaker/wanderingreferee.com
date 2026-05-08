@@ -1,7 +1,11 @@
 import { getCollection } from 'astro:content';
 
+export function showDrafts(): boolean {
+  return import.meta.env.DEV || import.meta.env.PUBLIC_SHOW_DRAFTS === 'true';
+}
+
 export async function getPublishedEntries() {
-  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const posts = await getCollection('posts', ({ data }) => !data.draft || showDrafts());
 
   return { posts };
 }

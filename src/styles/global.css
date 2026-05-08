@@ -175,6 +175,21 @@ body {
   font-weight: 700;
 }
 
+hgroup {
+  margin-bottom: 32px;
+
+  .post-heading {
+    margin-bottom: 0;
+  }
+}
+
+.post-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
 .post-heading {
   font-family: "Cartridge", sans-serif;
   font-weight: 600;

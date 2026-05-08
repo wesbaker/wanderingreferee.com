@@ -10,6 +10,7 @@ import BaseLayout from './BaseLayout.astro';
 
 interface Props {
   title: string;
+  subtitle?: string;
   description?: string;
   date: Date;
   tags?: string[];
@@ -21,6 +22,7 @@ interface Props {
 
 const {
   title,
+  subtitle,
   description,
   date,
   tags = [],
@@ -58,11 +60,25 @@ if (image) {
 
       {
         isLink && externalUrl ? (
-          <h1 class="post-heading">
-            <a href={externalUrl} rel="noopener noreferrer">
-              {title}
-            </a>
-          </h1>
+          subtitle ? (
+            <hgroup>
+              <h1 class="post-heading">
+                <a href={externalUrl} rel="noopener noreferrer">{title}</a>
+              </h1>
+              <p class="post-subtitle">{subtitle}</p>
+            </hgroup>
+          ) : (
+            <h1 class="post-heading">
+              <a href={externalUrl} rel="noopener noreferrer">
+                {title}
+              </a>
+            </h1>
+          )
+        ) : subtitle ? (
+          <hgroup>
+            <h1 class="post-heading">{title}</h1>
+            <p class="post-subtitle">{subtitle}</p>
+          </hgroup>
         ) : (
           <h1 class="post-heading">{title}</h1>
         )

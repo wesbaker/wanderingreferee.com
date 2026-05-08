@@ -61,31 +61,22 @@ if (image) {
         }
       </div>
 
-      {
-        isLink && externalUrl ? (
-          subtitle ? (
-            <hgroup>
-              <h1 class="post-heading">
-                <a href={externalUrl} rel="noopener noreferrer">{title}</a>
-              </h1>
-              <p class="post-subtitle">{subtitle}</p>
-            </hgroup>
-          ) : (
-            <h1 class="post-heading">
-              <a href={externalUrl} rel="noopener noreferrer">
-                {title}
-              </a>
-            </h1>
-          )
-        ) : subtitle ? (
+      {(() => {
+        const heading = (
+          <h1 class="post-heading">
+            {isLink && externalUrl
+              ? <a href={externalUrl} rel="noopener noreferrer">{title}</a>
+              : title
+            }
+          </h1>
+        );
+        return subtitle ? (
           <hgroup>
-            <h1 class="post-heading">{title}</h1>
+            {heading}
             <p class="post-subtitle">{subtitle}</p>
           </hgroup>
-        ) : (
-          <h1 class="post-heading">{title}</h1>
-        )
-      }
+        ) : heading;
+      })()}
 
       {
         image && (

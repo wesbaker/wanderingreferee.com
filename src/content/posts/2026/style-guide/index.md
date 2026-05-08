@@ -18,7 +18,7 @@ This page uses the optional `subtitle` frontmatter field:
 subtitle: "A reference post showing all available markdown styles"
 ```
 
-It renders in a `<p class="post-subtitle">` inside an `<hgroup>` with the `<h1>`, using `--text-muted` and `font-size: 1.1rem`.
+It renders in a `<p class="post-subtitle">` inside an `<hgroup>` with the `<h1>`, using `--black` at 0.6 opacity and `font-size: 1.1rem`.
 
 ## Heading 2
 

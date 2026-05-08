@@ -177,10 +177,10 @@ body {
 
 hgroup {
   margin-bottom: 32px;
+}
 
-  .post-heading {
-    margin-bottom: 0;
-  }
+hgroup .post-heading {
+  margin-bottom: 0;
 }
 
 .post-subtitle {

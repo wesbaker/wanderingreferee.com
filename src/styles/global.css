@@ -254,6 +254,10 @@ hgroup .post-heading {
   color: var(--text-secondary);
 }
 
+.post-body > :first-child {
+  margin-top: 0;
+}
+
 .post-body img {
   max-width: 100%;
   height: auto;

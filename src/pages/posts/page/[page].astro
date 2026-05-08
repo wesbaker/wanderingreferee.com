@@ -5,13 +5,13 @@ import Header from '../../../components/Header.astro';
 import Pagination from '../../../components/Pagination.astro';
 import PostCard from '../../../components/PostCard.astro';
 import Sidebar from '../../../components/Sidebar.astro';
-import { getAllTags } from '../../../lib/content';
+import { getAllTags, showDrafts } from '../../../lib/content';
 import { mergeFeed, type FeedItem } from '../../../lib/feed';
 import { homeIntro, pageSize, siteDescription } from '../../../lib/site';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('posts', ({ data }) => !data.draft);
+  const posts = await getCollection('posts', ({ data }) => !data.draft || showDrafts());
   const feed = mergeFeed<FeedItem>(
     posts.map((entry) => ({ type: 'post' as const, entry, date: entry.data.date })),
   );

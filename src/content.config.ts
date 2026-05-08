@@ -18,6 +18,7 @@ const posts = defineCollection({
       draft: z.boolean().default(false),
       image: image().optional(),
       externalUrl: optionalStringSchema,
+      subtitle: optionalStringSchema,
     }),
 });
 

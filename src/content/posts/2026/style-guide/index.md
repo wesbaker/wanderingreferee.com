@@ -1,5 +1,6 @@
 ---
 title: "Style Guide"
+subtitle: "A reference post showing all available markdown styles"
 date: 2026-04-28 10:04:11.331615000 -04:00
 description: "A reference post showing all available markdown styles."
 tags:
@@ -7,8 +8,17 @@ tags:
   - design
   - markdown
 draft: true
-externalUrl: "https://example.com"
 ---
+
+## Subtitle
+
+This page uses the optional `subtitle` frontmatter field:
+
+```yaml
+subtitle: "A reference post showing all available markdown styles"
+```
+
+It renders in a `<p class="post-subtitle">` inside an `<hgroup>` with the `<h1>`, using `--black` at 0.6 opacity and `font-size: 1.1rem`.
 
 ## Heading 2
 

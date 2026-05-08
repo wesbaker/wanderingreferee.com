@@ -46,6 +46,8 @@
   --border: #ddd;
   --orange: #e06c00;
   --orange-light: #fdf0e6;
+  --red: #b91c1c;
+  --red-light: #fde8e8;
   --bg: #fff;
   --text-secondary: #222;
   --text-muted: #333;
@@ -65,6 +67,8 @@
     --border: #2a2a2a;
     --orange: #f09040;
     --orange-light: #2d1a08;
+    --red: #f87171;
+    --red-light: #2d0f0f;
     --bg: #111;
     --text-secondary: #d0d0d0;
     --text-muted: #bbb;
@@ -175,6 +179,32 @@ body {
   font-weight: 700;
 }
 
+.tag-draft {
+  background: var(--red-light);
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+hgroup {
+  margin-bottom: 32px;
+}
+
+hgroup .post-heading {
+  margin-bottom: 0;
+}
+
+.post-subtitle {
+  color: var(--black);
+  opacity: 0.6;
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
 .post-heading {
   font-family: "Cartridge", sans-serif;
   font-weight: 600;
@@ -222,6 +252,10 @@ body {
   font-size: 19px;
   line-height: 1.8;
   color: var(--text-secondary);
+}
+
+.post-body > :first-child {
+  margin-top: 0;
 }
 
 .post-body img {

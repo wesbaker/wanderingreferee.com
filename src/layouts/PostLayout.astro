@@ -10,9 +10,11 @@ import BaseLayout from './BaseLayout.astro';
 
 interface Props {
   title: string;
+  subtitle?: string;
   description?: string;
   date: Date;
   tags?: string[];
+  draft?: boolean;
   image?: ImageMetadata;
   headings: MarkdownHeading[];
   isLink?: boolean;
@@ -21,9 +23,11 @@ interface Props {
 
 const {
   title,
+  subtitle,
   description,
   date,
   tags = [],
+  draft = false,
   image,
   headings,
   isLink = false,
@@ -47,6 +51,7 @@ if (image) {
     <main>
       <div class="post-meta">
         <span>{formattedDate}</span>
+        {draft && <span class="tag-draft">Draft</span>}
         {
           tags.map((tag) => (
             <a href={`/tags/${tag}`} class="tag">
@@ -56,17 +61,22 @@ if (image) {
         }
       </div>
 
-      {
-        isLink && externalUrl ? (
+      {(() => {
+        const heading = (
           <h1 class="post-heading">
-            <a href={externalUrl} rel="noopener noreferrer">
-              {title}
-            </a>
+            {isLink && externalUrl
+              ? <a href={externalUrl} rel="noopener noreferrer">{title}</a>
+              : title
+            }
           </h1>
-        ) : (
-          <h1 class="post-heading">{title}</h1>
-        )
-      }
+        );
+        return subtitle ? (
+          <hgroup>
+            {heading}
+            <p class="post-subtitle">{subtitle}</p>
+          </hgroup>
+        ) : heading;
+      })()}
 
       {
         image && (

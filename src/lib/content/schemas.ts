@@ -22,6 +22,7 @@ export const postSchema = z.object({
   draft: z.boolean().default(false),
   image: optionalStringSchema,
   externalUrl: optionalStringSchema,
+  subtitle: optionalStringSchema,
 });
 
 export type PostFrontmatter = z.infer<typeof postSchema>;

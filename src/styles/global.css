@@ -184,7 +184,8 @@ hgroup {
 }
 
 .post-subtitle {
-  color: var(--text-muted);
+  color: var(--black);
+  opacity: 0.6;
   font-size: 1.1rem;
   margin-top: 0.25rem;
   margin-bottom: 0;

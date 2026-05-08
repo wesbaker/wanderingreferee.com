@@ -22,6 +22,7 @@ const { Content, headings } = await render(post);
   description={post.data.description}
   date={post.data.date}
   tags={post.data.tags}
+  draft={post.data.draft}
   image={post.data.image}
   headings={headings}
   isLink={Boolean(post.data.externalUrl)}

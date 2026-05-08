@@ -14,6 +14,7 @@ interface Props {
   description?: string;
   date: Date;
   tags?: string[];
+  draft?: boolean;
   image?: ImageMetadata;
   headings: MarkdownHeading[];
   isLink?: boolean;
@@ -26,6 +27,7 @@ const {
   description,
   date,
   tags = [],
+  draft = false,
   image,
   headings,
   isLink = false,
@@ -49,6 +51,7 @@ if (image) {
     <main>
       <div class="post-meta">
         <span>{formattedDate}</span>
+        {draft && <span class="tag-draft">Draft</span>}
         {
           tags.map((tag) => (
             <a href={`/tags/${tag}`} class="tag">

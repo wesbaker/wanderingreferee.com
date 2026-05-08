@@ -20,6 +20,7 @@ const isLinkPost = Boolean(post.data.externalUrl);
 <article class="feed-card">
   <div class="feed-card-meta">
     <span>{date}</span>
+    {post.data.draft && <span class="tag-draft">Draft</span>}
     {isLinkPost && <span class="tag-link">Link</span>}
     {
       tags.map((tag) => (

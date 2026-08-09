@@ -34,6 +34,8 @@ Regular paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 **Bold text** and *italic text* and ***bold italic text***. You can also use ~~strikethrough~~ and `inline code` within a sentence.
 
+You can ==highlight text== using double equals signs, which renders as a `<mark>` styled with the site's blue accent.
+
 ## Lists
 
 ### Unordered List

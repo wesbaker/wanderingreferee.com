@@ -62,4 +62,10 @@ describe('slugFromMarkdownEntry', () => {
       'Expected a Markdown entry path',
     );
   });
+
+  it('prefixes the series folder name for year-nested series files', () => {
+    expect(slugFromMarkdownEntry('2026/rpgaday2026/01-discipline.md')).toBe(
+      'rpgaday2026-01-discipline',
+    );
+  });
 });

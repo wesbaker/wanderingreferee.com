@@ -40,5 +40,12 @@ export function slugFromMarkdownEntry(entry: string): string {
     return parts.at(-2)!;
   }
 
-  return filename.slice(0, -'.md'.length);
+  const stem = filename.slice(0, -'.md'.length);
+
+  // YYYY/series-folder/file.md → prefix the slug with the series folder name
+  if (parts.length >= 3) {
+    return `${parts.at(-2)}-${stem}`;
+  }
+
+  return stem;
 }

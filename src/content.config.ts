@@ -6,7 +6,7 @@ import { optionalStringSchema, slugFromMarkdownEntry, tagsSchema } from './lib/c
 const posts = defineCollection({
   loader: glob({
     base: './src/content/posts',
-    pattern: ['*.md', '*/index.md', '*/*.md', '*/*/index.md'],
+    pattern: ['*.md', '*/index.md', '*/*.md', '*/*/index.md', '*/*/*.md'],
     generateId: ({ entry }) => slugFromMarkdownEntry(entry),
   }),
   schema: ({ image }) =>

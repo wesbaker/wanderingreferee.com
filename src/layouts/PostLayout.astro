@@ -5,7 +5,8 @@ import type { MarkdownHeading } from 'astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Sidebar from '../components/Sidebar.astro';
-import { formatPostDate, getAllTags } from '../lib/content';
+import { getAllTags } from '../lib/content';
+import { formatPostDate } from '../lib/content/dates';
 import BaseLayout from './BaseLayout.astro';
 
 interface Props {

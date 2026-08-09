@@ -324,6 +324,12 @@ hgroup .post-heading {
   color: var(--black);
 }
 
+.post-body mark {
+  background: var(--blue-light);
+  color: var(--blue);
+  padding: 0 0.15em;
+}
+
 .post-body ul,
 .post-body ol {
   padding-left: 1.5em;

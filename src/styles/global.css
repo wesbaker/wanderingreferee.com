@@ -78,6 +78,14 @@
     --tag-border: #333;
     --tag-text: #bbb;
   }
+
+  .social-link[data-social='github'] {
+    --social-hover: #a371f7;
+  }
+
+  .social-link.rss {
+    --social-hover: #ffa94d;
+  }
 }
 
 body {
@@ -488,10 +496,24 @@ hgroup .post-heading {
 
 .social-link:hover {
   text-decoration: underline;
+  color: var(--social-hover);
+}
+
+.social-link[data-social='bluesky'] {
+  --social-hover: #0085ff;
+}
+
+.social-link[data-social='mastodon'] {
+  --social-hover: #6364ff;
+}
+
+.social-link[data-social='github'] {
+  --social-hover: #8250df;
 }
 
 .social-link.rss {
   color: var(--orange);
+  --social-hover: #f5913e;
 }
 
 .social-link svg {

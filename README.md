@@ -7,7 +7,7 @@ Source for [wanderingreferee.com](https://wanderingreferee.com) — a personal b
 - [Astro](https://astro.build) — static site generator
 - [Cloudflare Pages](https://pages.cloudflare.com) — hosting
 - [Pagefind](https://pagefind.app) — client-side search index, built after Astro
-- Lora (Google Fonts) and Cartridge (self-hosted woff2) — typography
+- Lora (Google Fonts) and [Cartridge](https://simplebits.shop/products/cartridge) (self-hosted woff2) — typography
 
 ## Local Development
 

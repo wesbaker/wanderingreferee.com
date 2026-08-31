@@ -1,5 +1,6 @@
 // @ts-check
 import mdx from '@astrojs/mdx';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import { remarkMark } from 'remark-mark-highlight';
@@ -9,6 +10,8 @@ export default defineConfig({
   site: 'https://wanderingreferee.com',
   integrations: [mdx(), sitemap()],
   markdown: {
-    remarkPlugins: [remarkMark],
+    processor: unified({
+      remarkPlugins: [remarkMark],
+    }),
   },
 });

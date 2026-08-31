@@ -4,56 +4,46 @@ Source for [wanderingreferee.com](https://wanderingreferee.com) — a personal b
 
 ## Stack
 
-- [Hugo](https://gohugo.io) v0.160.1 (extended) — static site generator
-- [Congo](https://jpanther.github.io/congo/) v2.13.0 — theme, loaded via Hugo Modules (`_vendor/`)
+- [Astro](https://astro.build) — static site generator
 - [Cloudflare Pages](https://pages.cloudflare.com) — hosting
+- [Pagefind](https://pagefind.app) — client-side search index, built after Astro
+- Lora (Google Fonts) and Cartridge (self-hosted woff2) — typography
 
 ## Local Development
 
+Requires Node.js 22.12 or newer.
+
 ```bash
-hugo server
+npm install
+npm run dev
 ```
+
+The development server runs at <http://localhost:4321>. Other useful commands:
+
+```bash
+npm test          # run the Vitest suite
+npx astro check   # type-check the site
+npm run build     # build Astro and the Pagefind index
+npm run preview   # preview the production build
+```
+
+Cloudflare Pages runs `build.sh`, which builds the site into `dist`.
 
 ## Content Structure
 
-Posts live in `content/posts/YEAR/slug/index.md` (Hugo leaf bundles). URLs are `/posts/slug/` — no year in the URL. Images go in the same directory as `index.md`.
+Posts live in `src/content/posts/YYYY/slug.md` or, when they have co-located images, in `src/content/posts/YYYY/slug/index.md`. URLs are `/posts/slug/`; the year is not part of the URL.
 
-## Creating a New Post
+Each post needs this frontmatter:
 
-Standard post:
-
-```bash
-hugo new content posts/2026/my-post/index.md
+```yaml
+---
+title: My Post
+date: 2026-08-30
+---
 ```
 
-Link post:
-
-```bash
-hugo new content posts/2026/my-link-post/index.md --kind link
-```
-
-Both commands create a leaf bundle at:
-
-```text
-content/posts/{year}/{slug}/
-└── index.md
-```
-
-The local `link` archetype scaffolds front matter like:
-
-```toml
-+++
-date = '2026-04-20T12:34:56-04:00'
-draft = true
-title = 'My Link Post'
-linkUrl = ''
-summary = ''
-showReadingTime = false
-+++
-```
-
-Set `linkUrl` to the destination URL. Link posts render as normal permalinked posts on this site, while list pages and the article header expose the external URL alongside the local permalink.
+Optional fields include `description`, `tags`, `draft`, `image`, `externalUrl`, and `subtitle`. Use `externalUrl` for a link post; it keeps a local permalink while sending readers to the external destination.
 
 ## Configuration
 
-Settings live in `config/_default/`. See `CLAUDE.md` for a full reference.
+The content collection schema lives in `src/content.config.ts`. See `CLAUDE.md` for the full project reference, including post presentation and redirect conventions.

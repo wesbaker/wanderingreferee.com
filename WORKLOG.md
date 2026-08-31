@@ -1,5 +1,8 @@
 # Worklog
 
+## 2026-08-30
+- Consolidated the outstanding Dependabot updates into one compatibility PR and refreshed the README from the retired Hugo/Congo workflow to the current Astro/npm workflow.
+
 ## 2026-04-21
 - Redesigned homepage with a two-column layout: posts on the left, sidebar on the right with bio, tag pills, and social links
 - Switched homepage from `profile` layout to a custom Congo layout (`layouts/_partials/home/custom.html`)
